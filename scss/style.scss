@@ -1,4 +1,3 @@
-
 $white: #FFFFFF;
 $cream: wheat;
 
@@ -13,7 +12,7 @@ $cream: wheat;
         @media (max-width: 576px){@content;}  
     }
     @else if $point == xs {
-        @media (max-width: 320px){@content;}  
+        @media (max-width: 375px){@content;}  
     }
     @else if $point == xl {
         @media (max-width: 1200px){@content;}  
@@ -35,7 +34,7 @@ body {
         color: #4D533C;
         @include breakpoint (xxl) {
             font-size: 30px;
-            }
+        }
         @include breakpoint (xl) {
                 font-size: 26px;
                 line-height: 36px;
@@ -43,20 +42,39 @@ body {
         @include breakpoint (mg) {
             font-size: 22px;
             line-height: 26px;
-            
+            margin-right: 47%;
+         }  
+         @include breakpoint (mg) {
+            margin-right: 10%;
          }       
-         @include breakpoint (sm) {
-         font-size: 16px;
-        }  
-        
     }
 }
 
 .wrapper {
-    width: 100%;
     margin-left: 6%;
+    width: 94%;
     max-width: 1440px;
-    
+    background-image: url(..//img/Bitmap.png);
+    height: 810px;
+    position: absolute;
+    z-index: -1;
+    @include breakpoint (xxl) {
+        height: 650px;
+        margin-left: 0;
+        width: 95%;
+    }
+    @include breakpoint (xl) {
+        height: 550px;
+    }
+    @include breakpoint (lg) {
+        height: 550px;
+    }
+    @include breakpoint (mg) {
+        height: 525px;
+    }
+    @include breakpoint (sm) {
+        height: 550px;
+    }
     &-img {
     margin: 0 auto;
     position: absolute;
@@ -71,30 +89,39 @@ body {
     line-height: 40px;
     position: fixed;
     right: 15px;
-    bottom: 50%;
+    bottom: 20%;
     font-weight: 700;
     z-index: 2;
     font-size: 14px;
-    border-radius: 30%;
+    background-color: #444A34;
+    border-radius: 50%;
     width: 45px;
     height: 45px;
-    background-color: #444A34;
+    border: none;
+    font-size: 40px;
     display: inline-block;
     text-align: center;
+
     @include breakpoint (xl) {
     font-size: 12px;
     width: 35px;
     height: 35px;
     line-height: 30px;
     right: 8px;
+    font-size: 30px;
     }
+
     @include breakpoint (lg) {
-        font-size: 10px;
+    font-size: 10px;
     width: 25px;
-    height: 25px;
+    height: 24px;
     line-height: 22px;
     right: 2px;
+    font-size: 20px;
     }
+    @include breakpoint (mg) {
+        right: 0px;
+        }
 }
 
 .wrapper2 {
@@ -102,7 +129,7 @@ body {
     width: 78%;
     margin-left: 17%;
     @include breakpoint (xl) {
-        margin-bottom: -3%;
+        
     }
     @include breakpoint (mg) {
         margin-left: 10%;
@@ -116,43 +143,48 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 5%;
-
+    padding-top: 3%;
+    @include breakpoint (lg) {
+    padding-top: 5%;    
+    }
+    @include breakpoint (sm) {
+    margin-bottom: 15%; 
+    padding-top: 8%;    
+    }
    
     .header-logo {    
         color: $white;
         font-size: 30px;
         font-weight: 700;
         @include breakpoint (xl) {
+            
+        }
+        @include breakpoint (lg) {
+            font-size: 25px;
+        }
+        
+        @include breakpoint (mg) {
             font-size: 20px;
         }
-        @include breakpoint (lg) {
-            font-size: 18px;
-        }
-        @include breakpoint (lg) {
-            font-size: 16px;
-        }
-        @include breakpoint (mg) {
-            font-size: 12px;
-        }
         @include breakpoint (sm) {
-            font-size: 10px;
+            
         }
         }
         .logo-img {
             display: inline-block;
             vertical-align: middle;
+            width: 40px;
             @include breakpoint (xl) {
-                width: 35px;
+               
             }
             @include breakpoint (lg) {
-                width: 30px;
+            
             }
             @include breakpoint (mg) {
-                width: 20px;
+                width: 30px;
             }
             @include breakpoint (sm) {
-                width: 15px;
+                
             }
         }
     }
@@ -164,6 +196,9 @@ body {
        .dropdown-click {
         border: none;
         background: transparent;
+        @include breakpoint (mg) {
+            margin-right: 20px;
+        }
        }
        .dropbtn {
         @include breakpoint (xl) {
@@ -173,7 +208,10 @@ body {
             width: 25px;
         }
         @include breakpoint (mg) {
-            width: 15px;
+            width: 20px;
+        }
+        @include breakpoint (sm) {
+            
         }
        }
     
@@ -199,15 +237,18 @@ body {
        
         @include breakpoint (xl) {
             font-size: 14px;
-            line-height: 25px;
+           
            } 
            @include breakpoint (lg) {
-            font-size: 10px;
-            line-height: 14px;
+            font-size: 12px;
+            line-height: 25px;
            } 
            @include breakpoint (mg) {
-            font-size: 7px;
-            line-height: 12px;
+            font-size: 11px;
+           } 
+           @include breakpoint (mg) {
+            font-size: 10px;
+            line-height: 20px;
            } 
       }
       
@@ -220,7 +261,7 @@ body {
       .show {
         display: block;
         @include breakpoint (lg) {
-            margin-left: 12%;
+            margin-left: 6%;
            } 
            @include breakpoint (mg) {
            
@@ -240,9 +281,13 @@ body {
     }
     @include breakpoint (xl) {
         padding-right: 6%;
+        margin-right: 30%;
     }
-    @include breakpoint (sm) {
-        width: 75%;
+    @include breakpoint (lg) {
+        margin-right: 20%;
+    }
+    @include breakpoint (mg) {
+        margin-right: 15%;
     }
     &-page {
         @include breakpoint (mg) {
@@ -255,13 +300,10 @@ body {
                     font-size: 12px;
                 }
                 @include breakpoint (mg) {
-                    font-size: 8px;
-                    margin-bottom: 5%;
+                   
                 }
                 @include breakpoint (sm) {
-                    font-size: 6px;
-            
-                    margin-bottom: calc(6% - 10px);
+                  
                 }
             }
             &-big {
@@ -271,19 +313,18 @@ body {
                     font-size: 45px;
                 }
                 @include breakpoint (xl) {
-                    font-size: 35px;
+                    
                 }
                 @include breakpoint (lg) {
-                    font-size: 30px;
+                    
                 }
                 @include breakpoint (mg) {
-                    font-size: 25px;
+                    font-size: 45px;
                     margin-top: 1%;
                     font-weight: 600;
                 }
                 @include breakpoint (sm) {
-                    font-size: 18.5px;
-                    margin-bottom: calc(10% - 10px);
+                    font-size: 40px;
                   
                 }
             }
@@ -295,22 +336,16 @@ body {
                 font-weight: 400;
                 margin-bottom: 5%;
                 @include breakpoint (xxl) {
-                    font-size: 14px;
-                    padding-right: 5%;
+                   
                 }
                 @include breakpoint (lg) {
-                    font-size: 10px;
+                    
                 }
                 @include breakpoint (mg) {
-                    margin-right: 2%;
-                    margin-top: -3%;
-                    margin-bottom: 1%;
+                    font-size: 14px;
                 }
                 @include breakpoint (sm) {
-                    font-size: 8px;
-                    margin-bottom: calc(4% - 10px);
-                    width: 115%;
-                    font-weight: 300;
+                    font-size: 12px
                 }
             }
             &-button {
@@ -322,16 +357,13 @@ body {
                     font-size: 14px;
                 }
                 @include breakpoint (lg) {
-                    font-size: 12px;
-                    line-height: 10px;
+                    
                 }
                 @include breakpoint (mg) {
-                    font-size: 8px;
-                    line-height: 5px;
+                    font-size: 12px;  
                 }
                 @include breakpoint (sm) {
-                    font-size: 6px;
-                    line-height: 4px;
+                  
                 }
             }
             
@@ -347,6 +379,7 @@ body {
 }
 
 .partner {
+    z-index: -1;
     &-logo {
         margin-top: calc(-6% - 10px);
         @include breakpoint (xxl) {
@@ -366,31 +399,44 @@ body {
             -ms-flex-pack: distribute;
             justify-content: space-around;
             gap: 4%;
-            background-color: #FFFFFF;
+            background-color: white;
             width: 72%;
             padding: 3%;
             border-radius: 2px 2px;
             position: absolute;
             right: 4.86%;
             box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
-            @include breakpoint (mg) {
-                width: 75%;    
+            @include breakpoint (lg) {
+                gap: 0; 
             }
-            @include breakpoint (sm) {
+            @include breakpoint (mg) {
+                width: 85%;   
+            }
+            @include breakpoint (mg) {
                 display: flex;
                 flex-wrap: wrap;
                 padding: 1%;
                 gap: 0%;
-                height: 10%;
+                justify-content: space-evenly;
+                padding: 0%;
             }
         &-img {
             width: 14%;
             padding-left: 2%;
             padding-right: 2%;
-            @include breakpoint (sm) {
+            @include breakpoint (xl) {
+                width: 15%;
+            }
+            @include breakpoint (lg) {
                 width: 17%;
+            }
+            @include breakpoint (mg) {
+                width: 20%;
                 padding-left: 5%;
-                padding-right: 5%;
+                
+            }
+            @include breakpoint (sm) {
+                width: 25%;
             }
 
           }
@@ -403,9 +449,12 @@ body {
    display: flex;
    justify-content: space-around;
    margin-bottom: 15%;
-   @include breakpoint (sm) {
-    margin-top: 45%;
+   @include breakpoint (mg) {
+    margin-top: 60%;
     }
+    @include breakpoint (sm) {
+        flex-wrap: wrap;
+        }
    &-left {
     margin-right: 5%;
     text-align: left;
@@ -418,13 +467,10 @@ body {
       line-height: 21px;
       color: rgba(77, 83, 60, 0.9);
       @include breakpoint (lg) {
-        font-size: 12px;;
+        font-size: 12px;
     }
     @include breakpoint (mg) {
-        font-size: 10px;
-    }
-    @include breakpoint (sm) {
-        font-size: 8px;;
+        
     }
     }
    
@@ -439,12 +485,10 @@ body {
             font-size: 14px;
         }
         @include breakpoint (mg) {
-            font-size: 12px;
-            line-height: 20px;
+           
         }
         @include breakpoint (mg) {
-            font-size: 10px;
-            line-height: 18px;
+            
         }
     }
     &-more {
@@ -455,14 +499,13 @@ body {
         @include breakpoint (xxl) {
             font-size: 14px;
         }
-        @include breakpoint (xl) {
-            font-size: 12px;
+        @include breakpoint (lg) {
+            
         }
         @include breakpoint (mg) {
-            font-size: 10px;
+            
         }
         @include breakpoint (mg) {
-            font-size: 8px;
         }
     }
    }
@@ -470,6 +513,12 @@ body {
       box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
       @include breakpoint (xxl) {
         margin-right: 0%;
+       }
+       @include breakpoint (mg) {
+        margin-right: -9%;
+       }
+       @include breakpoint (sm) {
+        margin-right: -0;
        }
     &-info {
         color: #4D533C;
@@ -487,13 +536,20 @@ body {
         margin-left: 10%;
         }
         @include breakpoint (lg) {
-           line-height: 30px;
+            font-size: 18px;
+            line-height: 30px;
         }
         @include breakpoint (mg) {
-         font-size: 10px;
-         margin-right: 4%;
-        margin-left: 6%;
-        line-height: 20px;
+            margin-right: 12%;
+            margin-left: 12%;
+            margin-top: 6%;
+        line-height: 25px;
+        font-size: 16px;
+        }
+        @include breakpoint (sm) {
+            
+        line-height: 22px;
+        font-size: 14px;
         }
     }
     &-people {
@@ -518,8 +574,8 @@ body {
             @include breakpoint (lg) {
                 
             }
-            @include breakpoint (mg) {
-               
+            @include breakpoint (sm) {
+                padding-top: 0;
             }
             &-two {
                 -webkit-box-shadow: none;
@@ -534,6 +590,7 @@ body {
             }
             @include breakpoint (mg) {
                 width: 90px;
+                margin-right: -7%;
             }
             @include breakpoint (sm) {
                 margin: 0 auto;
@@ -541,14 +598,15 @@ body {
             }
         }
         &-name {
-            @include breakpoint (xxl) {
-            
+            @include breakpoint (lg) {
+                margin-left: -6%;
             }
-            @include breakpoint (xl) {
-                
-                }
             @include breakpoint (mg) {
-               
+                margin-left: -5%;
+                }
+            @include breakpoint (sm) {
+                margin-left: 0%;
+                margin-top: -5%;
                 }
             &-man {
                 color: #4D533C;
@@ -561,14 +619,13 @@ body {
                 @include breakpoint (xl) {
                     font-size: 16px;
                 }
-                @include breakpoint (lg) {
-                    font-size: 14px;
-                    line-height: 23px;
-                }
                 @include breakpoint (mg) {
-                    font-size: 10px;
+                    font-size: 14px;
                     font-weight: 600;
                     margin: 0;
+                }
+                @include breakpoint (sm) {
+                   
                 }
             }
             &-work {
@@ -586,8 +643,7 @@ body {
                     line-height: 18px;
                 }
                 @include breakpoint (mg) {
-                    font-size: 8px;
-                    line-height: 10px;
+                    
                 }
             }
         }
@@ -608,7 +664,8 @@ body {
         margin-top: -5%; 
     }
     @include breakpoint (mg) {
-        margin-top: -10%;
+        
+        margin-top: 20%;
     }
     &-box1 {
         @include breakpoint (xxl) {
@@ -617,10 +674,10 @@ body {
             width: 118%;
         }
         @include breakpoint (mg) {
-            width: 118%;
+            width: 120%;
         }
         @include breakpoint (sm) {
-            
+            width: 156%;
         }
     }
     &-box2 {
@@ -633,10 +690,10 @@ body {
         @include breakpoint (lg) {
             font-size: 14px;
         line-height: 23px;
+       
         }
         @include breakpoint (mg) {
-            font-size: 10px;
-        line-height: 21px;
+            margin-left: -0;
         }
         @include breakpoint (sm) {
         }
@@ -671,8 +728,16 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15%;
+    z-index: -1;
+    position: relative;
+    @include breakpoint (sm) {
+        flex-wrap: wrap;
+    }
     &-left {
         flex: 0 0 45%;
+        @include breakpoint (sm) {
+            flex: 0 0 90%;
+        }
         &-pic {
             &-img {
                 max-width: 125%;  
@@ -696,7 +761,8 @@ body {
             @include breakpoint (sm) {
                 margin-right: -21%;
                 margin-left: 4%;
-               margin-top: -21%;
+               margin-top: -17%;
+               display: flex;
             }
             &-info {
                 color: #4D533C;
@@ -704,9 +770,8 @@ body {
                 padding-top: 7%;
                 padding-right: 7%;
                 @include breakpoint (sm) {
-                    padding-left: 4%;
-                    padding-top: 4%;
-                    padding-right: 4%;
+                    margin-right: 3%;
+                    padding: 3%;
                 }
                 &-more {
                     margin-left: 5%;   
@@ -718,12 +783,10 @@ body {
                         line-height: 22px;
                     }
                     @include breakpoint (lg) {
-                        font-size: 12px;
-                        line-height: 18px;
+                      
                     }
                     @include breakpoint (mg) {
-                        font-size: 10px;
-                        line-height: 14px;
+                        
                     }
                 }
             }
@@ -735,11 +798,15 @@ body {
                 @include breakpoint (lg) {
                     margin-left: 9%;
                 }
-                @include breakpoint (mg) {
+                @include breakpoint (lg) {
                     margin-left: 8%;
+                }
+                @include breakpoint (mg) {
+                    margin-left: 2%;
                 }
                 @include breakpoint (sm) {
                     margin-left: 0%;
+                    margin-right: 3%;
                     display: flex;
                     justify-content: center;
                 }
@@ -752,14 +819,14 @@ body {
                         height: 75px;
                     }
                     @include breakpoint (sm) {
-                        margin-left: 10%;
+                        
                     }
                     &-two {
                         @include breakpoint (lg) {
                             width: 115px;
                         }
                         @include breakpoint (mg) {
-                            width: 100px;
+            
                         }
                     }
                 }
@@ -775,12 +842,12 @@ body {
                         margin-top: -3%;
                     }
                     @include breakpoint (mg) {
-                        margin-left: -13%;
-                        margin-top: -10%;
+                        margin-left: -18%;
+                        margin-top: -6%;
                     }
                     @include breakpoint (sm) {
-                        margin-left: 0;
-                        margin-top: 0;
+                        margin-left: -10px;
+                        margin-top: -46px;
                     }
                     &-man {
                         color: #4D533C;
@@ -798,8 +865,11 @@ body {
                             line-height: 23px;
                         }
                         @include breakpoint (mg) {
-                            font-size: 10px;
+                            font-size: 12px;
                             font-weight: 600;
+                        }
+                        @include breakpoint (sm) {
+                            margin-left: 2%;
                         }
                     }
                     &-work {
@@ -818,8 +888,11 @@ body {
                             line-height: 18px;
                         }
                         @include breakpoint (mg) {
-                            font-size: 8px;
+                            font-size: 10px;
                             line-height: 10px;
+                        }
+                        @include breakpoint (sm) {
+                            padding-top: 7px;
                         }
                     }
                 }
@@ -836,7 +909,8 @@ body {
             margin-right: 0%;
         }
         @include breakpoint (sm) {
-            margin-left: 15%;
+            margin-left: 12%;
+            flex: 0 0 99%;
         }
         &-textbox {
             margin-bottom: 30%;
@@ -849,13 +923,13 @@ body {
                 line-height: 20px;
             }
             @include breakpoint (mg) {
-                font-size: 10px;
-                line-height: 16px;
+               
                 margin-right: -11%;
                 margin-bottom: 15%;
             }
             @include breakpoint (sm) {
                 margin-right: 0;
+                margin-bottom: 5%;
             }
             &-2 {
                 margin-top: 5%;
@@ -871,11 +945,9 @@ body {
                 font-size: 14px;
             }
             @include breakpoint (xl) {
-                font-size: 12px;
+                font-size: 14px;
             }
-            @include breakpoint (mg) {
-                font-size: 10px;
-            }
+            
         }
     }
 }
@@ -884,8 +956,16 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15%;
+    z-index: -1;
+    position: relative;
+    @include breakpoint (sm) {
+        flex-wrap: wrap-reverse;
+    }
     &-right {
         flex: 0 0 41%;
+        @include breakpoint (sm) {
+            flex: 0 0 87%;
+        }
         &-pic {
             &-img {
                 position: relative;
@@ -905,23 +985,29 @@ body {
             position: relative;
             box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
             @include breakpoint (lg) {
-                margin-right: 25%;
+                margin-right: 10%;
                 margin-left: -2%;
             }
             @include breakpoint (sm) {
-                margin-right: -21%;
-                margin-left: 5%;
-                margin-top: -22%;
+                margin-right: -16%;
+                margin-left: 12%;
+                margin-top: -20%;
+                display: flex;
             }
+           
             &-info {
                 color: #4D533C;
                 padding-left: 9%;
                 padding-top: 7%;
                 padding-right: 9%;
+                @include breakpoint (lg) {
+                    padding-left: 6%;
+                    }
                 @include breakpoint (sm) {
-                padding-left: 4%;
-                padding-top: 4%;
-                padding-right: 6%;
+                    padding-left: 4%;
+                    padding-top: 4%;
+                    padding-right: 0%;
+                    padding-bottom: 4%;
                 }
                 &-more {
                     margin-left: 5%;   
@@ -931,14 +1017,13 @@ body {
                     @include breakpoint (xxl) {
                         font-size: 14px;
                         line-height: 22px;
+                        
                     }
                     @include breakpoint (lg) {
-                        font-size: 12px;
-                        line-height: 18px;
+                        
                     }
                     @include breakpoint (mg) {
-                        font-size: 10px;
-                        line-height: 14px;
+                        
                     }
                 }
             }
@@ -948,9 +1033,8 @@ body {
                 justify-content: space-around;
                 align-items: center;
                 @include breakpoint (sm) {
-                    justify-content: center;
-                    display: flex;
-                    align-items: center;
+                    margin-right: 3%;
+                    width: auto;
                 }
                 &-img {
                     height: 113px;
@@ -977,9 +1061,24 @@ body {
                     }
                 }
                 &-name {
-                    margin-left: -40%;
+                    margin-left: -10%;
+                    margin-top: -10%;
+                    @include breakpoint (xl) {
+                        margin-left: -12%;
+                    margin-top: -11%;
+                    }
+                    @include breakpoint (lg) {
+                        margin-left: -12%;
+                        margin-top: -3%;
+                    }
                     @include breakpoint (mg) {
-                        margin-left: 0;  
+                        margin-left: -18%;
+                        margin-top: -6%;
+                    }
+                    @include breakpoint (sm) {
+                        margin-left: -2px;
+                        margin-top: -46px;
+                        text-align: center;
                     }
                     &-man {
                         color: #4D533C;
@@ -997,11 +1096,10 @@ body {
                             line-height: 23px;
                         }
                         @include breakpoint (mg) {
-                            font-size: 10px;
-                            font-weight: 600;
+                    
                         }
                         @include breakpoint (sm) {
-                            padding-left: 18%;
+                            
                         }
                     }
                     &-work {
@@ -1020,8 +1118,11 @@ body {
                             line-height: 18px;
                         }
                         @include breakpoint (mg) {
-                            font-size: 8px;
+                            font-size: 10px;
                             line-height: 10px;
+                        }
+                        @include breakpoint (sm) {
+                            padding-top: 7px;
                         }
                     }
                 }
@@ -1036,11 +1137,13 @@ body {
          padding-right: 7%;
          padding-left: 19%;
          @include breakpoint (sm) {
-            flex: 0 0 29%;
+            flex: 0 0 79%;
+            margin-bottom: 5%;
         }
         &-title {
+            
             @include breakpoint (sm) {
-                margin-left: -29%;
+               
             }
         }
          &-textbox {
@@ -1054,14 +1157,14 @@ body {
                 line-height: 20px;
             }
             @include breakpoint (mg) {
-                font-size: 10px;
-                line-height: 16px;
+                
                 margin-right: -11%;
                 margin-bottom: 15%;
             }
             @include breakpoint (sm) {
-                margin-left: -29%;
+                margin-bottom: 6%;
             }
+            
             &-2 {
                 margin-top: 5%;
             }
@@ -1076,13 +1179,13 @@ body {
                 font-size: 14px;
             }
             @include breakpoint (xl) {
-                font-size: 12px;
+               
             }
             @include breakpoint (mg) {
-                font-size: 10px;
+                
             }
             @include breakpoint (sm) {
-                margin-left: -29%;
+               
             }
     }
 }
@@ -1093,8 +1196,16 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15%;
+    z-index: -1;
+    position: relative;
+    @include breakpoint (sm) {
+        flex-wrap: wrap;
+    }
     &-left {
         flex: 0 0 45%;
+        @include breakpoint (sm) {
+            flex: 0 0 90%;
+        }
         &-pic {
             &-img {
                 max-width: 125%;  
@@ -1118,7 +1229,8 @@ body {
             @include breakpoint (sm) {
                 margin-right: -21%;
                 margin-left: 4%;
-               margin-top: -21%;
+               margin-top: -17%;
+               display: flex;
             }
             &-info {
                 color: #4D533C;
@@ -1126,9 +1238,8 @@ body {
                 padding-top: 7%;
                 padding-right: 7%;
                 @include breakpoint (sm) {
-                    padding-left: 4%;
-                    padding-top: 4%;
-                    padding-right: 4%;
+                    margin-right: 5%;
+                    padding: 4%;
                 }
                 &-more {
                     margin-left: 5%;   
@@ -1140,12 +1251,10 @@ body {
                         line-height: 22px;
                     }
                     @include breakpoint (lg) {
-                        font-size: 12px;
-                        line-height: 18px;
+                      
                     }
                     @include breakpoint (mg) {
-                        font-size: 10px;
-                        line-height: 14px;
+                        
                     }
                 }
             }
@@ -1157,11 +1266,15 @@ body {
                 @include breakpoint (lg) {
                     margin-left: 9%;
                 }
-                @include breakpoint (mg) {
+                @include breakpoint (lg) {
                     margin-left: 8%;
+                }
+                @include breakpoint (mg) {
+                    margin-left: 2%;
                 }
                 @include breakpoint (sm) {
                     margin-left: 0%;
+                    margin-right: 3%;
                     display: flex;
                     justify-content: center;
                 }
@@ -1174,14 +1287,14 @@ body {
                         height: 75px;
                     }
                     @include breakpoint (sm) {
-                        margin-left: 10%;
+                        
                     }
                     &-two {
                         @include breakpoint (lg) {
                             width: 115px;
                         }
                         @include breakpoint (mg) {
-                            width: 100px;
+            
                         }
                     }
                 }
@@ -1197,12 +1310,13 @@ body {
                         margin-top: -3%;
                     }
                     @include breakpoint (mg) {
-                        margin-left: -13%;
-                        margin-top: -10%;
+                        margin-left: -18%;
+                        margin-top: -6%;
                     }
                     @include breakpoint (sm) {
-                        margin-left: 0;
-                        margin-top: 0;
+                        margin-left: -25px;
+                        margin-top: -46px;
+                        text-align: center;
                     }
                     &-man {
                         color: #4D533C;
@@ -1220,8 +1334,11 @@ body {
                             line-height: 23px;
                         }
                         @include breakpoint (mg) {
-                            font-size: 10px;
+                            font-size: 12px;
                             font-weight: 600;
+                        }
+                        @include breakpoint (sm) {
+                            margin-left: 2%;
                         }
                     }
                     &-work {
@@ -1240,8 +1357,11 @@ body {
                             line-height: 18px;
                         }
                         @include breakpoint (mg) {
-                            font-size: 8px;
+                            font-size: 10px;
                             line-height: 10px;
+                        }
+                        @include breakpoint (sm) {
+                            padding-top: 7px;
                         }
                     }
                 }
@@ -1258,7 +1378,8 @@ body {
             margin-right: 0%;
         }
         @include breakpoint (sm) {
-            margin-left: 15%;
+            margin-left: 12%;
+            flex: 0 0 99%;
         }
         &-textbox {
             margin-bottom: 30%;
@@ -1271,13 +1392,13 @@ body {
                 line-height: 20px;
             }
             @include breakpoint (mg) {
-                font-size: 10px;
-                line-height: 16px;
+              
                 margin-right: -11%;
                 margin-bottom: 15%;
             }
             @include breakpoint (sm) {
                 margin-right: 0;
+                margin-bottom: 5%;
             }
             &-2 {
                 margin-top: 5%;
@@ -1293,10 +1414,7 @@ body {
                 font-size: 14px;
             }
             @include breakpoint (xl) {
-                font-size: 12px;
-            }
-            @include breakpoint (mg) {
-                font-size: 10px;
+                font-size: 14px;
             }
         }
     }
@@ -1330,6 +1448,9 @@ body {
          justify-content: space-around;
          margin-bottom: 5%;
         }
+        @include breakpoint (sm) {
+            justify-content: flex-start;
+            }
         &-box {
           &-one, &-two, &-tree, &-four {
             max-width: 255px;
@@ -1337,10 +1458,11 @@ body {
                 max-width: 245px;
             }
             @include breakpoint (mg) {
-                max-width: 200px;
+                width: 200px;
             }
             @include breakpoint (sm) {
-                max-width: 320px;
+                width: 100%;
+                max-width: 100%;
             }
             &-product {
                 @include breakpoint (lg) {
@@ -1364,11 +1486,10 @@ body {
                     }
                     @include breakpoint (lg) {
                     font-size: 20px;
-                    line-height: 24px;;
+                    line-height: 24px;
                     }
                     @include breakpoint (mg) {
-                        font-size: 16px;
-                        line-height: 20px;;
+                        
                     }
                 } 
                 &-block {
@@ -1385,14 +1506,14 @@ body {
                         height: 80px;
                     }
                     @include breakpoint (mg) {
-                        font-size: 12px;;
-                        line-height: 22px;
-                        height: 100px;
+                        height: 135px;
                         padding-bottom: 0%;
-                        height: 100px;
+                        width: 160px;
                     }
                     @include breakpoint (sm) {
+                        width: 100%;
                         height: auto;
+                        padding-right: 0;
                     }
                 } 
                 &-button {
@@ -1406,21 +1527,19 @@ body {
                         font-weight: 700;
                         @include breakpoint (lg) {
                             font-size: 14px;
-                            line-height: 14px;;
+                            line-height: 14px;
                             }
                             @include breakpoint (mg) {
-                                font-size: 12px;
-                                line-height: 12px;
+                               
                                 margin-top: -5%;
                         }
                     }
                     @include breakpoint (lg) {
                         font-size: 14px;
-                        line-height: 14px;;
+                        line-height: 14px;
                         }
                         @include breakpoint (mg) {
-                            font-size: 12px;
-                            line-height: 12px;;
+                           
                     }
                 } 
                
@@ -1442,6 +1561,9 @@ body {
     margin-right: -20%;
     margin-bottom: -16%;
     box-shadow: 50px 130px 100px rgba(0, 0, 0, 0.145947);
+    @include breakpoint (mg) {
+        margin-right: -30%;
+    }
     &-all {
         background-color: white;
         padding-left: 15%;
@@ -1474,12 +1596,10 @@ body {
             line-height: 50px;
         }
         @include breakpoint (sm) {
-            font-size: 35px;
-            line-height: 40px;
+            
         }
         @include breakpoint (xs) {
-            font-size: 30px;
-            line-height: 30px;
+           
         }
     }
     &-btn {
@@ -1496,12 +1616,10 @@ body {
             line-height: 16px;
         }
         @include breakpoint (lg) {
-            font-size: 12px;
-             line-height: 14px;
+            
         }
         @include breakpoint (mg) {
-            font-size: 10px;
-            line-height: 12px;
+            
         }
         }
     }
@@ -1541,8 +1659,7 @@ body {
             line-height: 30px;
         }
         @include breakpoint (mg) {
-            font-size: 10px;
-            line-height: 25px;
+            
         }
         &-phone,&-adress {
             &-title {
@@ -1605,14 +1722,6 @@ body {
                             font-size: 18px;
                             line-height: 30px;
                         }
-                        @include breakpoint (mg) {
-                            font-size: 14px;
-                            line-height: 25px;
-                        }
-                        @include breakpoint (sm) {
-                            font-size: 12px;
-                            line-height: 20px;
-                        }
                     }
                     &-tap {
                         text-decoration: none;
@@ -1626,10 +1735,6 @@ body {
                         @include breakpoint (lg) {
                             font-size: 12px;
                             line-height: 30px;
-                        }
-                        @include breakpoint (mg) {
-                            font-size: 10px;
-                            line-height: 25px;
                         }
                         
                         &-mar {
@@ -1645,10 +1750,6 @@ body {
                             @include breakpoint (lg) {
                                 font-size: 12px;
                                 line-height: 30px;
-                            }
-                            @include breakpoint (mg) {
-                                font-size: 10px;
-                                line-height: 0px;
                             }
                         }
                         }
@@ -1669,8 +1770,6 @@ body {
                     line-height: 30px;
                 }
                 @include breakpoint (mg) {
-                    font-size: 10px;
-                    line-height: 25px;
                     margin-bottom: -5%;
                 }
             }
@@ -1691,7 +1790,6 @@ body {
                 padding-left: 0;
                 @include breakpoint (lg) {
                     display: flex;
-                   
                     flex-wrap: wrap;
                 }
     
@@ -1701,8 +1799,9 @@ body {
                         margin-right: 10%;
                     }
                     @include breakpoint (mg) {
-                        width: 86px;
+                        width: 100px;
                         margin-right: 8%;
+                        margin-top: 3%;
                     }
  
                     &-tap {
@@ -1717,10 +1816,6 @@ body {
                     @include breakpoint (lg) {
                         font-size: 12px;
                         line-height: 20px;
-                    }
-                    @include breakpoint (mg) {
-                        font-size: 10px;
-                        line-height: 18px;
                     }
                     
                     &-mar {
@@ -1737,10 +1832,6 @@ body {
                         @include breakpoint (lg) {
                             font-size: 12px;
                             line-height: 30px;
-                        }
-                        @include breakpoint (mg) {
-                            font-size: 10px;
-                            line-height: 25px;
                         }
                     }
                     }
@@ -1762,8 +1853,6 @@ body {
                     margin-bottom: -5%;
                 }
                 @include breakpoint (mg) {
-                    font-size: 10px;
-                    line-height: 25px;
                     margin-bottom: -8%;
                 }
                 @include breakpoint (sm) {
@@ -1793,15 +1882,6 @@ body {
         width: 30px;
         background-size: 15px;
         }
-        @include breakpoint (mg) {
-            height: 20px;
-            width: 20px;
-            background-size: 10px;
-        }
-        @include breakpoint (sm) {
-            height: 20px;
-            width: 20px;
-        }
         }
         &-3 {
         background-color:#FFD723;
@@ -1822,15 +1902,6 @@ body {
             height: 30px;
         width: 30px;
         background-size: 15px;
-        }
-        @include breakpoint (mg) {
-            height: 20px;
-            width: 20px;
-            background-size: 10px;
-        }
-        @include breakpoint (sm) {
-            height: 20px;
-            width: 20px;
         }
         }
         &-1 {
@@ -1879,8 +1950,8 @@ body {
             font-size: 16px;
         }
         @include breakpoint (sm) {
-            font-size: 12px;
-            width: 76px;
+            
+            width: 100px;
         }
         span {
             color: yellow;
@@ -1914,9 +1985,7 @@ body {
             line-height: 15px;
         }
         @include breakpoint (sm) {
-            font-size: 6px;
-        line-height: 10px;
+            font-size: 8px;
         }
     }   
 }
-
