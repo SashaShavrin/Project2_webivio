@@ -40,7 +40,7 @@ body h2 {
   margin-left: 6%;
   width: 94%;
   max-width: 1440px;
-  background-image: url(..//img/Bitmap.png);
+  background-image: url(img/Bitmap.png);
   height: 810px;
   position: absolute;
   z-index: -1;
@@ -2246,7 +2246,7 @@ body h2 {
   width: 94%;
   margin-left: 6%;
   max-width: 1440px;
-  background-image: url(../img/Bg.svg);
+  background-image: url(img/Bg.svg);
   margin-top: -15%;
   position: relative;
   z-index: -1;
@@ -2614,7 +2614,7 @@ body h2 {
   display: inline-block;
   height: 40px;
   width: 40px;
-  background-image: url(../img/twitter-brands.svg);
+  background-image: url(img/twitter-brands.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;
@@ -2636,15 +2636,15 @@ body h2 {
 }
 
 .footer .box-1 {
-  background-image: url(../img/facebook-f-brands.svg);
+  background-image: url(img/facebook-f-brands.svg);
 }
 
 .footer .box-2 {
-  background-image: url(../img/google-plus-g-brands.svg);
+  background-image: url(img/google-plus-g-brands.svg);
 }
 
 .footer .box-4 {
-  background-image: url(../img/linkedin-in-brands.svg);
+  background-image: url(img/linkedin-in-brands.svg);
 }
 
 .line-vert {
