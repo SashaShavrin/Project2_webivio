@@ -1630,7 +1630,7 @@ body {
     width: 94%;
     margin-left: 6%;
     max-width: 1440px;
-    background-image: url(../img/Bg.svg);
+    background-image: url(img/Bg.svg);
     margin-top: -15%;
     position: relative;
     z-index: -1;
@@ -1890,7 +1890,7 @@ body {
         display: inline-block;
         height: 40px;
         width: 40px;
-        background-image: url(../img/twitter-brands.svg);
+        background-image: url(img/twitter-brands.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 20px;
@@ -1905,14 +1905,14 @@ body {
         }
         }
         &-1 {
-            background-image: url(../img/facebook-f-brands.svg)
+            background-image: url(img/facebook-f-brands.svg)
         }
         &-2 {
 
-            background-image: url(../img/google-plus-g-brands.svg)
+            background-image: url(img/google-plus-g-brands.svg)
         }
         &-4 {
-            background-image: url(../img/linkedin-in-brands.svg)
+            background-image: url(img/linkedin-in-brands.svg)
         }
 }
 }
