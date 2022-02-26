@@ -2301,7 +2301,6 @@ body h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 12%;
   font-size: 16px;
   line-height: 40px;
 }
@@ -2318,6 +2317,10 @@ body h2 {
     font-size: 12px;
     line-height: 30px;
   }
+}
+
+.conect-top-phone, .conect-top-adress {
+  margin-right: 10%;
 }
 
 .conect-top-phone-title, .conect-top-adress-title {
@@ -2646,7 +2649,7 @@ body h2 {
   display: inline-block;
   height: 40px;
   width: 40px;
-  background-image: url(img/twitter-brands.svg);
+  background-image: url(../img/twitter-brands.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;
@@ -2668,15 +2671,15 @@ body h2 {
 }
 
 .footer .box-1 {
-  background-image: url(img/facebook-f-brands.svg);
+  background-image: url(../img/facebook-f-brands.svg);
 }
 
 .footer .box-2 {
-  background-image: url(img/google-plus-g-brands.svg);
+  background-image: url(../img/google-plus-g-brands.svg);
 }
 
 .footer .box-4 {
-  background-image: url(img/linkedin-in-brands.svg);
+  background-image: url(../img/linkedin-in-brands.svg);
 }
 
 .line-vert {
